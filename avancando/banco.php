@@ -18,13 +18,20 @@ $contasCorrentes = [
     '069.564.896-12' => [
         'titular' => "Luna",
         'saldo' => 250000
+    ],
+    '229.564.896-12' => [
+        'titular' => "Carol",
+        'saldo' => 250000
     ]
+    
 ];
 
 $contasCorrentes['123.456.789-90'] = sacar($contasCorrentes['123.456.789-90'], 500);
 $contasCorrentes['123.456.789-90'] = sacar($contasCorrentes['123.456.789-90'], 130);
 
 $contasCorrentes['123.564.896-91'] = depositar($contasCorrentes['123.564.896-91'], 337);
+
+unset($contasCorrentes['229.564.896-12']);
 
 foreach ($contasCorrentes as $cpf => $conta){
     //$contasCorrentes['123.456.789-90'] = sacar($contasCorrentes['123.456.789-90'], 500);
