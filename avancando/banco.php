@@ -30,7 +30,10 @@ foreach ($contasCorrentes as $cpf => $conta){
     //$contasCorrentes['123.456.789-90'] = sacar($contasCorrentes['123.456.789-90'], 500);
     //exibeMensagem($cpf . " " . $conta['titular'] . ' ' . $conta['saldo']);
     //exibeMensagem("$cpf $conta[titular] $conta[saldo]");
-    exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
+    //list('titular' => $titular, 'saldo' => $saldo) = $conta;
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    //exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
+    exibeMensagem("$cpf $titular $saldo");
     //echo $cpf . " " . $conta['titular']. PHP_EOL;
     
 }
